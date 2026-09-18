@@ -1,0 +1,14 @@
+:root { color-scheme: light dark; }
+body {
+  margin: 0;
+  padding-inline: 16px;
+  font: 17px/1.5 -apple-system, system-ui, sans-serif;
+  background: Canvas;
+  color: CanvasText;
+}
+main { max-width: 40rem; margin: 0 auto; padding-block: 2rem; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.2rem; margin-top: 2rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; }
+a { color: #0a64d6; }
+@media (prefers-color-scheme: dark) { a { color: #5aa2ff; } }

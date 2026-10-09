@@ -1,14 +1,84 @@
-:root { color-scheme: light dark; }
+:root {
+  color-scheme: light dark;
+  --bg: #f7f8f7;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --muted: #5f6368;
+  --line: #e3e5e3;
+  --accent: #0a64d6;
+  --ors: #00a3a8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111213;
+    --surface: #1c1d1f;
+    --text: #f2f2f2;
+    --muted: #a5a8ac;
+    --line: #2c2e31;
+    --accent: #5aa2ff;
+    --ors: #3cc7cb;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   padding-inline: 16px;
-  font: 17px/1.5 -apple-system, system-ui, sans-serif;
-  background: Canvas;
-  color: CanvasText;
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
-main { max-width: 40rem; margin: 0 auto; padding-block: 2rem; }
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.2rem; margin-top: 2rem; }
-h3 { font-size: 1rem; margin-top: 1.5rem; }
-a { color: #0a64d6; }
-@media (prefers-color-scheme: dark) { a { color: #5aa2ff; } }
+main, footer { max-width: 42rem; margin: 0 auto; }
+main { padding-block: 2.5rem 1rem; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0.5rem 0; }
+h2 { font-size: 1.25rem; margin: 2.5rem 0 0.5rem; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 0.25rem; }
+p { margin: 0.5rem 0; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+
+.hero { display: flex; gap: 1.25rem; align-items: center; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
+.hero p { font-size: 1.1rem; color: var(--muted); margin: 0; }
+.lead { font-size: 1.15rem; margin-top: 1.75rem; }
+
+.cards { display: grid; gap: 12px; margin-top: 1rem; }
+@media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+.card h3 { margin-top: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+.example {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.example strong { display: block; font-size: 1.6rem; }
+.example span { color: var(--muted); }
+
+.notice {
+  border-left: 3px solid var(--line);
+  padding: 0.25rem 0 0.25rem 1rem;
+  color: var(--muted);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.25rem 2.5rem;
+  font-size: 0.93rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+footer a { color: var(--muted); }

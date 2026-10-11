@@ -42,7 +42,10 @@ a { color: var(--accent); }
 .hero { display: flex; gap: 1.25rem; align-items: center; }
 .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
 .hero p { font-size: 1.1rem; color: var(--muted); margin: 0; }
+.intro { font-size: 1.25rem; line-height: 1.4; margin-top: 1.75rem; }
+.intro strong { display: block; }
 .lead { font-size: 1.15rem; margin-top: 1.75rem; }
+.intro + .lead { margin-top: 1rem; }
 
 .cards { display: grid; gap: 12px; margin-top: 1rem; }
 @media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } }

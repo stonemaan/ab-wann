@@ -38,6 +38,9 @@ h3 { font-size: 1.05rem; margin: 1.5rem 0 0.25rem; }
 p { margin: 0.5rem 0; }
 a { color: var(--accent); }
 .muted { color: var(--muted); }
+/* The app's name inside running text, where "Ab wann" is easily read as the
+   phrase "ab wann". Full text colour so it also stands out in grey paragraphs. */
+.app { font-weight: 700; color: var(--text); }
 
 .hero { display: flex; gap: 1.25rem; align-items: center; }
 .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
